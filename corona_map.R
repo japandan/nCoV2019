@@ -39,7 +39,7 @@ col4 = "#CC0000"
 library("ggmap")
 
 #Set your API Key
-ggmap::register_google(key = "AIzaSyBPLIptr_3tvU3BG2TL4fzezJ9RDL5Jxvg")
+ggmap::register_google(key = "ABCDEFGHIJKLMNOPQRSTUVWXYZ.....")
 
 #Notes: If you get still have a failure then I suggest to restart R and run the library and register google commands again.
 # AIzaSyBPLIptr_3tvU3BG2TL4fzezJ9RDL5Jxvg
