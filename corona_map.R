@@ -39,17 +39,24 @@ col4 = "#CC0000"
 library("ggmap")
 
 #Set your API Key
-ggmap::register_google(key = "ABCDEFGHIJKLMNOPQRSTUVWXYZ....")
+ggmap::register_google(key = "AIzaSyBPLIptr_3tvU3BG2TL4fzezJ9RDL5Jxvg")
 
 #Notes: If you get still have a failure then I suggest to restart R and run the library and register google commands again.
 # AIzaSyBPLIptr_3tvU3BG2TL4fzezJ9RDL5Jxvg
 
 ##1) Create a map with all of the victim locations plotted.
 
-p <- ggmap(get_googlemap(center = c(lon = 117.2, lat = 31.8),
-                         zoom = 4, scale = 2,
-                         maptype ='terrain',
+#p <- ggmap(get_googlemap(center = c(lon = 117.2, lat = 31.8),
+#                         zoom = 6, scale = 2,
+#                         maptype ='terrain',
+#                         color = 'color'))
+
+#p<-p + geom_point(aes(x = longitude, y = latitude, colour=city), data = ncov_hubei, size = 0.5) + theme(legend.position="bottom")
+
+q <- ggmap(get_googlemap(center = c(lon = 117.2, lat = 31.8),
+                         zoom = 3, scale = 2,
+                         maptype ='hybrid',
                          color = 'color'))
 
-p + geom_point(aes(x = longitude, y = latitude,  colour = Initial.Type.Group), data = ncov_outside_hubei, size = 0.5) + 
-  theme(legend.position="bottom")
+q<-q + geom_point(aes(x = longitude, y = latitude, colour=country), data = ncov_outside_hubei, size = 0.5) + theme(legend.position="bottom")
+print(q)
