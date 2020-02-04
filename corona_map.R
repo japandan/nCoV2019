@@ -7,13 +7,14 @@
 # Load the relevant libraries - do this every time
 require("lubridate")
 require("ggplot2")
-#require("dplyr")
-#require("dbplyr")
+require("dplyr")
 require("data.table")
 require("ggrepel")
 require("tidyverse")
+#
 library("lubridate")
 library("ggplot2")
+library("dplyr")
 library("data.table")
 library("ggrepel")
 library("tidyverse")
