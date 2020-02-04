@@ -39,13 +39,13 @@ col4 = "#CC0000"
 #Load the library
 library("ggmap")
 
-#Set your API Key
+#Set your API Key  ...replace with a key created on Google cloud.  You must enable API static map and billing!!!!
 ggmap::register_google(key = "ABCDEFGHIJKLMNOPQRSTUVWXYZ.....")
 
 #Notes: If you get still have a failure then I suggest to restart R and run the library and register google commands again.
 # AIzaSyBPLIptr_3tvU3BG2TL4fzezJ9RDL5Jxvg
 
-##1) Create a map with all of the victim locations plotted.
+##1) Create a map with all of the patients' locations plotted.
 
 #p <- ggmap(get_googlemap(center = c(lon = 117.2, lat = 31.8),
 #                         zoom = 6, scale = 2,
@@ -53,6 +53,11 @@ ggmap::register_google(key = "ABCDEFGHIJKLMNOPQRSTUVWXYZ.....")
 #                         color = 'color'))
 
 #p<-p + geom_point(aes(x = longitude, y = latitude, colour=city), data = ncov_hubei, size = 0.5) + theme(legend.position="bottom")
+#
+# help on these functions...
+#
+#https://www.rdocumentation.org/packages/ggmap/versions/3.0.0/topics/get_googlemap
+#https://ggplot2.tidyverse.org/reference/geom_point.html#aesthetics
 
 q <- ggmap(get_googlemap(center = c(lon = 117.2, lat = 31.8),
                          zoom = 3, scale = 2,
